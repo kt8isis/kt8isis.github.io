@@ -1,21 +1,22 @@
 function init() {
     let content = document.getElementById("content");
     let marks = [];
-    for (child of content.childNodes) {
-        if (child.nodeType != Node.ELEMENT_NODE) { continue; }
-        let start = child.getAttribute("data-start");
-        let end = child.getAttribute("data-end");
-        if ((start === undefined) || (end === undefined)) {
-            continue;
+    function visit(element) {
+        for (child of element.childNodes) {
+            if (child.nodeType != Node.ELEMENT_NODE) { continue; }
+            let range = child.getAttribute("data-range");
+            if (range) {
+                let [start, end] = range.split(":");
+                marks.push({
+                    start: parseFloat(start),
+                    end: parseFloat(end),
+                    element: child
+                });
+            }
+            visit(child);
         }
-        
-        marks.push({
-            start: parseFloat(start),
-            end: parseFloat(end),
-            element: child
-        });
-        
     }
+    visit(content);
     function timeupdate(event) {
         let time = event.target.currentTime;
         for (mark of marks) {
