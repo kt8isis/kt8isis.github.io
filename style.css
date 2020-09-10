@@ -1,10 +1,37 @@
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Cormorant Garamond Medium'), local('CormorantGaramond-Medium'), url('fonts/CormorantGaramond-Medium.woff2') format('woff2'), url('fonts/CormorantGaramond-Medium.woff') format('woff');
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Cormorant Garamond Medium Italic'), local('CormorantGaramond-MediumItalic'), url('fonts/Montserrat-MediumItalic.woff2') format('woff2'), url('fonts/Montserrat-MediumItalic.woff') format('woff');
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Cormorant Garamond Bold'), local('CormorantGaramond-Bold'), url('fonts/CormorantGaramond-Bold.woff2') format('woff2'), url('fonts/CormorantGaramond-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url('fonts/Montserrat-Regular.woff2') format('woff2'), url('fonts/Montserrat-Regular.woff') format('woff');
+}
+
 body {
-  background-image: url("DSC_7569.jpg");
-  background-repeat: no-repeat;
-  background-size:  cover;
-  background-attachment: fixed;
   font-size: 12pt;
   margin: 0;
+  font-variant-ligatures: discretionary-ligatures;
+  text-rendering: optimizelegibility;
 }
 #player {
   position: fixed;
@@ -23,7 +50,7 @@ body {
 
 #content {
   max-width: 45em;
-  margin: auto;
+  margin: 1em auto;
   background-color: rgba(255,255,255,0.66);
   padding: 1em;
   border-radius: 1em;
@@ -77,7 +104,7 @@ sidenote {
 p {
   font-family: 'Cormorant Garamond', serif;
 }
-h2, h3 {
+h1, h2, h3, h4 {
   text-align: center;
   font-style: italic;
   font-family: 'Cormorant Garamond', serif;
@@ -97,9 +124,60 @@ h2, h3 {
   margin-left: 2em;
   font-style: italic;
 }
+section.ende {
+  padding: 1em;
+}
 .ende {
   text-align: center;
-  font-size: 13pt;
+  font-size: 14pt;
+  font-style: italic;
+  font-family: 'Cormorant Garamond', serif;
+}
+q {
+  font-style: italic;
+  quotes: "«" "»";
+}
+a:link {
+  color: green;
+}
+section::before {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+/* 2 */
+section.ich::before {
+  content: "Ich";
+  display: inline;
+}
+section.leser::before {
+  content: "Leser";
+}
+section.u {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+section.u sidenote {
+  left: 2em;
+}
+h4 {
+  margin-bottom: 0.5em;
+}
+li {
+    margin: 0.5em 0;
 }
 
-
+#background {
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+#background picture {
+  display: flex;
+  object-fit: cover;
+}
