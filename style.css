@@ -3,28 +3,28 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: local('Cormorant Garamond Medium'), local('CormorantGaramond-Medium'), url('fonts/CormorantGaramond-Medium.woff2') format('woff2'), url('fonts/CormorantGaramond-Medium.woff') format('woff');
+  src: local('Cormorant Garamond Medium'), local('CormorantGaramond-Medium'), url('s/fonts/CormorantGaramond-Medium.woff2') format('woff2'), url('s/fonts/CormorantGaramond-Medium.woff') format('woff');
 }
 @font-face {
   font-family: 'Cormorant Garamond';
   font-style: italic;
   font-weight: 500;
   font-display: swap;
-  src: local('Cormorant Garamond Medium Italic'), local('CormorantGaramond-MediumItalic'), url('fonts/Montserrat-MediumItalic.woff2') format('woff2'), url('fonts/Montserrat-MediumItalic.woff') format('woff');
+  src: local('Cormorant Garamond Medium Italic'), local('CormorantGaramond-MediumItalic'), url('s/fonts/Montserrat-MediumItalic.woff2') format('woff2'), url('s/fonts/Montserrat-MediumItalic.woff') format('woff');
 }
 @font-face {
   font-family: 'Cormorant Garamond';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local('Cormorant Garamond Bold'), local('CormorantGaramond-Bold'), url('fonts/CormorantGaramond-Bold.woff2') format('woff2'), url('fonts/CormorantGaramond-Bold.woff') format('woff');
+  src: local('Cormorant Garamond Bold'), local('CormorantGaramond-Bold'), url('s/fonts/CormorantGaramond-Bold.woff2') format('woff2'), url('s/fonts/CormorantGaramond-Bold.woff') format('woff');
 }
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Montserrat Regular'), local('Montserrat-Regular'), url('fonts/Montserrat-Regular.woff2') format('woff2'), url('fonts/Montserrat-Regular.woff') format('woff');
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url('s/fonts/Montserrat-Regular.woff2') format('woff2'), url('s/fonts/Montserrat-Regular.woff') format('woff');
 }
 
 body {
