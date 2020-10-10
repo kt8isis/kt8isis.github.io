@@ -39,17 +39,53 @@ body {
   bottom: 0;
   z-index: 1;
 }
+#player > div.button-frame {
+  border: 5px solid white;
+  border-radius: 20px;
+  margin: 10px;
+  background-color: rgba(0,0,0,0.25);
+  width: 70px;
+  height: 70px;
+  opacity: 0.75;
+  transition: background-color 0.3s ease;
+}
+#player > div.button-frame:hover {
+  background-color: rgba(0,0,0,0.75);
+}
 #player > audio {
   display: block;
   width: 24em;
 }
+#player > div.button-frame > button {
+  display: none;
+  border: 0;
+  background: transparent;
+  box-sizing: border-box;
+  width: 30px;
+  height: 40px;
+  cursor: pointer;
+  border-style: solid;
+  margin: 15px 20px;
+  padding: 0;
+  transition: 300ms border-color ease;
+  transition: 300ms border-width ease;
+}
+#player > div.button-frame > button.play {
+  border-color: transparent transparent transparent white;
+  border-width: 20px 0 20px 30px;
+}
+#player > div.button-frame > button.pause {
+  border-width: 0 10px 0 10px;
+  border-color: transparent white transparent white;
+  padding: 0 5px;
+}
+
 [data-active=true]  {
   text-decoration: underline;
 }
 
-
 #content {
-  max-width: 45em;
+  max-width: 40em;
   margin: 1em auto;
   background-color: rgba(255,255,255,0.66);
   padding: 1em;
